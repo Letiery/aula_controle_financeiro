@@ -11,6 +11,16 @@ export const categories: Category = {
         color: 'brown',
         expense: true
     },
+    outlay: {
+        title: '(-) Despesas',
+        color: 'purple',
+        expense: true,
+    },
+    proceeds:{
+        title: '(+) Entradas',
+        color: 'lightGreen',
+        expense: false,
+    },
     salary:{
         title: 'Salário',
         color: 'green',

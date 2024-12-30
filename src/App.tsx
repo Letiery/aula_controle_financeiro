@@ -1,14 +1,12 @@
 import { useState, useEffect } from 'react';
 import * as C from './App.styles';
 import { Item } from './types/Item';
-import { Category } from './types/Category';
 import { items } from './data/items';
 import { categories } from './data/categories';
 import { getCurrentMonth, filterListByMonth } from './helpers/dateFilter';
-import { Table } from './components/TableArea/styles';
-import { TableArea } from './components/TableArea';
-import { InfoArea } from './components/InfoArea';
-import { InputArea } from './components/InputArea';
+import { TableArea } from './components/Dashboard/TableArea';
+import { InfoArea } from './components/Dashboard/InfoArea';
+import { InputArea } from './components/Dashboard/InputArea';
 
 const App = () => {
   const [list, setList] = useState(items); //lista completa de dados com todos os meses
