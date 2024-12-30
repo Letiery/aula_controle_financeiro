@@ -8,6 +8,15 @@ type Props = {
 }
 
 export const TableItem = ({ item }: Props) => {
+    
+    const money = (item.value); //Pegar o número que representa valor e colocar dentro da variável money
+    
+    const formatMoney = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    }).format(money); //transformar o valor money para o formato nacional de moeda
+
+
     return(
         <C.TableLine>
             <C.TacleColumn>{formatDate(item.date)}</C.TacleColumn>
@@ -19,7 +28,7 @@ export const TableItem = ({ item }: Props) => {
             <C.TacleColumn>{item.title}</C.TacleColumn>
             <C.TacleColumn>
                 <C.Value color={categories[item.category].expense ? 'red' : 'green'}>
-                    R$ {item.value}
+                    {formatMoney}
                 </C.Value>
             </C.TacleColumn>
         </C.TableLine>

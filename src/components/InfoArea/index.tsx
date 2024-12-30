@@ -23,7 +23,7 @@ export const InfoArea = ({currentMonth, onMonthChange, income, expense}: Props) 
         currentDate.setMonth( currentDate.getMonth() + 1 ); //aumenta um mês
         onMonthChange(`${currentDate.getFullYear()} - ${currentDate.getMonth() + 1}`);
     }
-
+   
     return(
         <C.Container>
             <C.MonthArea>
